@@ -1,0 +1,17 @@
+@import "_bootstrap";
+
+$main-font: "proxima-nova";
+$main-font-wt: 300;
+$main-font-sz: 18px;
+$primary-color: #333;
+
+body {
+  font-family: $main-font;
+  font-weight: $main-font-wt;
+  font-size: $main-font-sz;
+  color: $primary-color;
+}
+
+.navbar-brand {
+  font-weight: 500;
+}
