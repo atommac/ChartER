@@ -4593,7 +4593,10 @@ body {
   font-family: "proxima-nova";
   font-weight: 300;
   font-size: 18px;
-  color: #333; }
+  font-color: #333; }
+
+.section {
+  padding-top: 80px; }
 
 .navbar-brand {
   font-weight: 500; }

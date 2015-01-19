@@ -106,24 +106,40 @@
     </div>
 </nav>
 
-<section id="patient_info" style="height: 900px">
-    The plugin adds a random text generator, capable of creating witty texts in different genres. Created text can be inserted newly at the caret, or replace a selection.
-    The dummy text generator is added to the main menu, tools menu and into the generate... popup (Alt+Insert).
+<section id="patient_info" class="section" style="height: 900px">
+    <div class="container">
+    <form class="form-horizontal" role="form" method="POST" action="/chart">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-    The plugin allows to choose from several genres:
-    Culinary Inspirations
-    Esoteric Wisdom
-    Fake Latin (similar to "Lorem Ipsum" blindtext)
-    Pirate Lingo
-    Science Fiction
-
-    When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection of text within a single line, the amount of words is roughly being maintained.
-    When the replaced text selection consists fully of lower-cased or capital letters or begins with a capital letter, that previous casing is maintained. Furthermore, the presence or absence of a trailing punctuation mark of a replaced text selection is being maintained.
-
-    Please note: This plugin is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
+        <!-- Date Form Input -->
+        <div class="form-group">
+            {!! Form::label('date', 'Date:') !!}
+            {!! Form::text('date', null, ['class' => 'form-control', 'placeholder' => 'Date']) !!}
+        </div>
+        <!-- Patient initials Form Input -->
+        <div class="form-group">
+            {!! Form::label('patientinitials', 'Patient Initials:') !!}
+            {!! Form::text('patientinitials', null, ['class' => 'form-control', 'placeholder' => 'Patient initials']) !!}
+        </div>
+        <!-- Hospital Form Input -->
+        <div class="form-group">
+            {!! Form::label('hospital', 'Hospital:') !!}
+            {!! Form::text('hospital', null, ['class' => 'form-control', 'placeholder' => 'Hospital']) !!}
+        </div>
+        <!-- Roomnumber Form Input -->
+        <div class="form-group">
+            {!! Form::label('roomnumber', 'Room Number:') !!}
+            {!! Form::text('roomnumber', null, ['class' => 'form-control', 'placeholder' => 'Room number']) !!}
+        </div>
+        <!-- Arrivalmode Form Input -->
+        <div class="form-group">
+            {!! Form::label('arrivalmode', 'Arrival Mode:') !!}
+            {!! Form::text('arrivalmode', null, ['class' => 'form-control', 'placeholder' => 'Arrival mode']) !!}
+        </div>
+    </form>
+    </div>
 </section>
-<section id="cc" style="height: 900px">
+<section id="cc" class="section" style="height: 900px">
     The plugin adds a random text generator, capable of creating witty texts in different genres. Created text can be inserted newly at the caret, or replace a selection.
     The dummy text generator is added to the main menu, tools menu and into the generate... popup (Alt+Insert).
 
